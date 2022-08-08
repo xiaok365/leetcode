@@ -19,7 +19,7 @@ public:
             }
         }
 
-        return intervals.size() - ans;
+        return (int) intervals.size() - ans;
     }
 
     static bool cmp(const vector<int> &u, const vector<int> &v) {
@@ -31,7 +31,6 @@ public:
 int main() {
 
     freopen("../a.in", "r", stdin);
-//    freopen("../a.out", "w", stdout);
 
     int n;
     cin >> n;
@@ -39,22 +38,7 @@ int main() {
         cin >> a[i][0] >> a[i][1];
     }
 
-//    a.resize(n);
-//    sort(a.begin(), a.end(), cmp);
-//
-//    int ans = 1, right = a[0][1];
-//    for (int i = 1; i < n; ++i) {
-//        if (a[i][0] >= right) {
-//            right = a[i][1];
-//            ans++;
-//        }
-//    }
-
     cout << Solution::eraseOverlapIntervals(a) << endl;
-
-//    for (int i = 0; i < n; ++i) {
-//        cout << a[i][0] << " " << a[i][1] << endl;
-//    }
 
     return 0;
 }
